@@ -1,0 +1,11 @@
+.authentication-content {
+  position: relative;
+  top: 75px;
+}
+.x{
+  max-height: 90vh !important;
+}
+
+.navbar .navbar-toggler-icon {
+  background-color: rgb(31, 18, 74);
+}

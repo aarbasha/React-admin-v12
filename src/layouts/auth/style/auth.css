@@ -1,0 +1,11 @@
+
+.singupCard {
+    position: relative !important;
+    top: -47px;
+    max-height: 100px!important;
+}
+ .loginCard {
+    position: relative !important;
+    top: -30px;
+    max-height: 100px!important;
+}

@@ -1,0 +1,53 @@
+.btn-outline-primary:focus .active:focus {
+    color: none;
+    background-color: none;
+    border-color: none;
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-user {
+    background: rgb(0, 212, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 212, 255, 1) 0%,
+      rgb(15, 5, 73) 0%,
+      rgba(36, 26, 0, 1) 100%
+    );
+  }
+  
+  .navbar-user .dropdown-menu {
+    background: rgb(0, 212, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 212, 255, 1) 0%,
+      rgba(36, 19, 136, 1) 0%,
+      rgba(36, 26, 0, 1) 100%
+    );
+    transition: all 0.5s;
+    width: 300px;
+  }
+  .navbar-user .dropdown-menu .dropdown-item {
+    color: wheat;
+  }
+  .navbar-user .dropdown-menu .dropdown-item:hover {
+    background-color: blue;
+    transition: all 0.5s;
+  }
+  
+  .navbar-user .nav-item .nav-link {
+    color: wheat !important;
+    transition: all 0.5s;
+  }
+  
+  .navbar-user .nav-item .nav-link:hover {
+    color: rgb(255, 30, 0) !important;
+    transition: all 0.5s;
+  }
+  
+  .navbar-nav .nav-item .active {
+    border-bottom: 1px solid rgb(119, 0, 0);
+    box-shadow: 2px 4px 50px rgb(0, 229, 255);
+    transition: all 0.5s;
+  }
+  
