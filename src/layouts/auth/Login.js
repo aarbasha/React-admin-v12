@@ -1,12 +1,48 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-
+import "./style/auth.css"
 const Login = () => {
   const Rediract = useNavigate();
+
+
+  const setLoding = () => {
+    document.querySelector("#login").setAttribute('disabled', '');
+    document.querySelector("#inputEmailAddress").setAttribute('disabled', '');
+    document.querySelector("#inputChoosePassword").setAttribute('disabled', '');
+    document.querySelector(".spinner-border").classList.remove("d-none")
+    document.querySelector(".error").classList.add('d-none')
+  }
+
+  const setError = () => {
+    document.querySelector("#login").removeAttribute('disabled');
+    document.querySelector("#inputEmailAddress").removeAttribute('disabled');
+    document.querySelector("#inputChoosePassword").removeAttribute('disabled');
+    document.querySelector(".spinner-border").classList.add('d-none')
+    document.querySelector(".error").classList.remove('d-none')
+    setTimeout(() => {
+      document.querySelector(".error").classList.add('d-none')
+    }, 4000)
+    Rediract("/login");
+  }
+
   const handelLogin = () => {
-    Rediract("/");
-    localStorage.setItem("auth", "Anas");
+    setLoding()
+
+    setTimeout(() => {
+
+      const name = "xx"
+
+      if (name === "x") {
+        localStorage.setItem("auth", "Anas")
+        Rediract("/");
+      } else {
+        setError();
+        Rediract("/login");
+      }
+
+    }, 4000)
+
   };
   return (
     <>
@@ -24,16 +60,26 @@ const Login = () => {
                     {/* <img src="assets/images/error/auth-img-7.png" className="img-fluid" alt /> */}
                   </div>
                   <div className="col-12 col-xl-4 order-xl-2">
+
+                    <div className="d-none error position-relative">
+                      <div className="bg-danger text-white text-center w-100 position-absolute py-2 px-2 text-center">
+                        ... يرجى التأكد من البيانات والمحاولة من جديد
+
+                      </div>
+                    </div>
+
                     <div className="card-body p-4 p-sm-5">
                       <div className="d-flex justify-content-between">
-                        <h3 className="card-title">Login</h3>
+                        <h3 className="card-title mb-4">Login</h3>
                         <div
-                          className="mb-4 spinner-border text-primary"
+                          className="mb-4 d-none spinner-border text-primary"
                           role="status"
                         >
                           {" "}
                           <span className="visually-hidden">Loading...</span>
                         </div>
+
+
                       </div>
                       {/* <p className="card-text mb-4"></p> */}
 
@@ -55,6 +101,7 @@ const Login = () => {
                                 className="form-control radius-30 ps-5"
                                 id="inputEmailAddress"
                                 placeholder="Email"
+                                required
                               />
                             </div>
                           </div>
@@ -74,6 +121,7 @@ const Login = () => {
                                 className="form-control radius-30 ps-5"
                                 id="inputChoosePassword"
                                 placeholder="Password"
+                                required
                               />
                             </div>
                           </div>
@@ -94,9 +142,9 @@ const Login = () => {
                             </div>
                           </div>
                           <div className="col-6 text-end">
-                            <a href="authentication-forgot-password.html">
+                            <Link to={'/forgetPassword'}>
                               Forgot Password ?
-                            </a>
+                            </Link>
                           </div>
                           <div className="col-12">
                             <div className="d-grid">
@@ -104,7 +152,8 @@ const Login = () => {
                                 // disabled
                                 type="button"
                                 onClick={handelLogin}
-                                className="btn btn-primary radius-30 "
+                                className="btn btn-primary radius-30"
+                                id="login"
                               >
                                 Login
                               </button>
