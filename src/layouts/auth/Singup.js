@@ -44,7 +44,7 @@ const Singup = () => {
                 Rediract("/singup");
             }
 
-        }, 4000)
+        }, 3000)
 
     };
     return (

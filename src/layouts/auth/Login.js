@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./style/auth.css"
 const Login = () => {
   const Rediract = useNavigate();
-
-
   const setLoding = () => {
     document.querySelector("#login").setAttribute('disabled', '');
     document.querySelector("#inputEmailAddress").setAttribute('disabled', '');
@@ -13,7 +11,6 @@ const Login = () => {
     document.querySelector(".spinner-border").classList.remove("d-none")
     document.querySelector(".error").classList.add('d-none')
   }
-
   const setError = () => {
     document.querySelector("#login").removeAttribute('disabled');
     document.querySelector("#inputEmailAddress").removeAttribute('disabled');
@@ -41,7 +38,7 @@ const Login = () => {
         Rediract("/login");
       }
 
-    }, 4000)
+    }, 3000)
 
   };
   return (

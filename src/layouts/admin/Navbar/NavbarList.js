@@ -186,6 +186,55 @@ const NavbarList = () => {
                                     </div>
                                 </a>
 
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <img src="assets/images/avatars/avatar-1.png" alt className="rounded-circle" width={52} height={52} />
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                Amelio Joly
+                                                <span className="msg-time float-end text-secondary">1 m</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The standard chunk of lorem...</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <img src="assets/images/avatars/avatar-2.png" alt className="rounded-circle" width={52} height={52} />
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                Althea Cabardo
+                                                <span className="msg-time float-end text-secondary">7 m</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Many desktop publishing</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <img src="assets/images/avatars/avatar-3.png" alt className="rounded-circle" width={52} height={52} />
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                Katherine Pechon
+                                                <span className="msg-time float-end text-secondary">2 h</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Making this the first true</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <img src="assets/images/avatars/avatar-4.png" alt className="rounded-circle" width={52} height={52} />
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                Peter Costanzo
+                                                <span className="msg-time float-end text-secondary">3 h</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">It was popularised in the 1960</small>
+                                        </div>
+                                    </div>
+                                </a>
+
                             </div>
                             <div className="p-2">
                                 <div><hr className="dropdown-divider" /></div>
@@ -216,6 +265,77 @@ const NavbarList = () => {
                                         <input className="form-control" type="search" placeholder="Search Messages" />
                                     </form>
                                 </div>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <div className="notification-box">
+                                            <i className="bi bi-basket2-fill" />
+                                        </div>
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                New Orders
+                                                <span className="msg-time float-end text-secondary">1 m</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">You have recived new orders</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <div className="notification-box">
+                                            <i className="bi bi-people-fill" />
+                                        </div>
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                New Customers
+                                                <span className="msg-time float-end text-secondary">7 m</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">5 new user registered</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <div className="notification-box">
+                                            <i className="bi bi-file-earmark-bar-graph-fill" />
+                                        </div>
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                24 PDF File
+                                                <span className="msg-time float-end text-secondary">2 h</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">The pdf files generated</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <div className="notification-box">
+                                            <i className="bi bi-collection-play-fill" />
+                                        </div>
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                Time Response
+                                                <span className="msg-time float-end text-secondary">3 h</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">5.1 min avarage time response</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a className="dropdown-item" href="#">
+                                    <div className="d-flex align-items-center">
+                                        <div className="notification-box">
+                                            <i className="bi bi-cursor-fill" />
+                                        </div>
+                                        <div className="ms-3 flex-grow-1">
+                                            <h6 className="mb-0 dropdown-msg-user">
+                                                New Product Approved
+                                                <span className="msg-time float-end text-secondary">1 d</span>
+                                            </h6>
+                                            <small className="mb-0 dropdown-msg-text text-secondary d-flex align-items-center">Your new product has approved</small>
+                                        </div>
+                                    </div>
+                                </a>
+
                                 <a className="dropdown-item" href="#">
                                     <div className="d-flex align-items-center">
                                         <div className="notification-box">
