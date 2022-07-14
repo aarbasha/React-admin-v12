@@ -1,6 +1,8 @@
 import Singup from "../layouts/auth/Singup"
 import Login from "../layouts/auth/Login"
 import ForgetPassword from "../layouts/auth/ForgetPassword"
+import ConfirmCode from "../layouts/auth/ConfirmCode"
+import ResetPassword from "../layouts/auth/ResetPassword"
 import MasterAuth from "../layouts/frontend/private/MasterAuth"
 import Home from '../components/frontend/public/Home'
 import About from '../components/frontend/public/About'
@@ -27,6 +29,14 @@ export const RouterUser = () => {
             {
                 path: 'forgetPassword',
                 element: <ForgetPassword />
+            },
+            {
+                path: 'confirmCode',
+                element: <ConfirmCode />
+            },
+            {
+                path: 'resetPassword',
+                element: <ResetPassword />
             },
             {
                 path: 'user',

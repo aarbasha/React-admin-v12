@@ -31,7 +31,7 @@ const Login = () => {
 
     setTimeout(() => {
 
-      const name = "xx"
+      const name = "x"
 
       if (name === "x") {
         localStorage.setItem("auth", "Anas")

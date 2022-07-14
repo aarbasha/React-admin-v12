@@ -98,7 +98,7 @@ const SidebarContent = () => {
                         <a href="component-avtars-chips.html" className="list-group-item"><i className="bi bi-person-badge" />Avatrs &amp; Chips</a>
                         <a href="component-typography.html" className="list-group-item"><i className="bi bi-person-badge" />Typography</a>
 
-                        
+
                     </div>
 
 

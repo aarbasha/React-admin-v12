@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../images/brand-logo-2.png";
 import "./style/auth.css";
-const ForgetPassword = () => {
+const ConfirmCode = () => {
     const Rediract = useNavigate();
 
     const setDisabled = () => {
-        document.querySelector("#send").setAttribute("disabled", "");
-        document.querySelector("#inputEmailid").setAttribute("disabled", "");
+        document.querySelector("#Confirm").setAttribute("disabled", "");
+        document.querySelector("#inputNumber").setAttribute("disabled", "");
         document.querySelector(".spinner-border").classList.remove("d-none");
     };
 
     const setSuccess = () => {
-        // document.querySelector("#send").removeAttribute("disabled");
-        // document.querySelector("#inputEmailid").removeAttribute("disabled");
+        // document.querySelector("#Confirm").removeAttribute("disabled");
+        // document.querySelector("#inputNumber").removeAttribute("disabled");
         document.querySelector(".spinner-border").classList.add("d-none");
         document.querySelector(".success").classList.remove("d-none");
         setTimeout(() => {
@@ -22,7 +22,7 @@ const ForgetPassword = () => {
         }, 7000);
     };
 
-    const SendToEmail = () => {
+    const Confirm = () => {
         setDisabled();
 
         setTimeout(() => {
@@ -30,7 +30,7 @@ const ForgetPassword = () => {
         }, 4000);
 
         setTimeout(() => {
-            Rediract("/confirmCode");
+            Rediract("/resetPassword");
         }, 6000);
     };
 
@@ -43,7 +43,7 @@ const ForgetPassword = () => {
             >
                 <div className="container">
                     <div className="authentication-card forgetPassword">
-                        <div className="card shadow rounded-0 overflow-hidden">
+                        <div className="card shadow rounded-0 overflow-hidden col-lg-6 col-md-6 col-sm-6">
                             <div className="d-none success">
                                 <div className="bg-success text-white text-center w-100 position-absolute py-2 px-2 text-center">
                                     The data has been successfully sent to the email, please check
@@ -65,39 +65,50 @@ const ForgetPassword = () => {
                                 <div className="col-lg-12">
                                     <div className="card-body p-sm-5">
                                         <h3 className="card-title text-center p-2">
-                                            Forgot Password?
+                                            Confirm Code
                                         </h3>
 
                                         <p className="card-text mb-5 text-center">
-                                            Enter your registered email ID to reset the password
+                                            The code has been sent to your email, please enter the code
                                         </p>
 
                                         <div className="row g-3">
                                             <div className="col-12">
                                                 <input
-                                                    type="email"
+                                                    type={"number"}
+
                                                     className="form-control form-control-lg radius-30"
-                                                    id="inputEmailid"
-                                                    placeholder="Email id or Username or Number Phone "
+                                                    id="inputNumber"
+                                                    placeholder="Enter Tha Code from MailBox"
                                                 />
                                             </div>
                                             <div className="col-12">
                                                 <div className="d-grid gap-3">
                                                     <button
-                                                        onClick={SendToEmail}
+                                                        onClick={Confirm}
                                                         type="button"
-                                                        id="send"
-                                                        className="btn btn-lg btn-primary radius-30"
+                                                        id="Confirm"
+                                                        className="btn btn-success radius-30"
                                                     >
-                                                        Send
+                                                        Confirm
                                                     </button>
                                                     <Link
-                                                        to="/login"
-                                                        id="send"
-                                                        className="btn btn-lg btn-dark radius-30"
+                                                        to="/forgetPassword"
+                                                        className="btn btn-primary px-4 w-40 radius-30"
+                                                        id="Confirm"
                                                     >
-                                                        Back to Login
+                                                        Did you not receive a code?!
                                                     </Link>
+
+                                                    <Link
+                                                        to="/login"
+                                                        className="btn btn-primary px-4 w-40 radius-30"
+                                                        id="Confirm"
+                                                    >
+                                                        login
+                                                    </Link>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -112,4 +123,4 @@ const ForgetPassword = () => {
     );
 };
 
-export default ForgetPassword;
+export default ConfirmCode;
