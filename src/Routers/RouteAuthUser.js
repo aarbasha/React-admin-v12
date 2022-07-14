@@ -4,8 +4,6 @@ import Login from "../layouts/auth/Login"
 import Favorite from "../components/frontend/private/Favorite"
 
 export const RouteAuthUser = () => {
-
-
     return (
         [
             {

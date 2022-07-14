@@ -20,23 +20,23 @@ export const RouterUser = () => {
             },
             {
                 path: 'login',
-                element: <Login />
+                element: localStorage.getItem("auth") ? <Home /> : <Login />
             },
             {
                 path: 'singup',
-                element: <Singup />
+                element: localStorage.getItem("auth") ? <Home /> : <Singup />
             },
             {
                 path: 'forgetPassword',
-                element: <ForgetPassword />
+                element: localStorage.getItem("auth") ? <Home /> : <ForgetPassword />
             },
             {
                 path: 'confirmCode',
-                element: <ConfirmCode />
+                element: localStorage.getItem("auth") ? <Home /> : <ConfirmCode />
             },
             {
                 path: 'resetPassword',
-                element: <ResetPassword />
+                element: localStorage.getItem("auth") ? <Home /> : <ResetPassword />
             },
             {
                 path: 'user',

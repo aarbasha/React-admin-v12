@@ -85,7 +85,7 @@ const ResetPassword = () => {
                                                 </label>
                                                 <div className="ms-auto position-relative">
                                                     <div className="position-absolute top-50 translate-middle-y search-icon px-3"><i className="bi bi-lock-fill" /></div>
-                                                    <input type="email" className="form-control radius-30 ps-5" id="inputNewPassword" placeholder="Enter New Password" />
+                                                    <input type="password" className="form-control radius-30 ps-5" id="inputNewPassword" placeholder="Enter New Password" />
                                                 </div>
                                             </div>
 
